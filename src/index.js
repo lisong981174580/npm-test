@@ -190,3 +190,63 @@ loadimg('https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg').t
 }).catch(error => {
   // 图片加载失败
 })
+
+
+import {
+  setLocalStorage,
+  getLocalStorage,
+  removeLocalStorage,
+  clearLocalStorage,
+  setSessionStorage,
+  getSessionStorage,
+  removeSessionStorage,
+  clearSessionStorage,
+  setCookie,
+  getCookie,
+  removeCookie,
+} from 'easy-storage-browser';
+
+// setLocalStorage('key1', {a: 1, b: {c: 3}});
+// console.log('getLocalStorage', getLocalStorage('key1'));
+
+// removeLocalStorage('key1');
+// console.log('getLocalStorage', getLocalStorage('key1'));
+
+// setLocalStorage('key1', {a: 1, b: {c: 3}}, 'uid_123456');
+// console.log('getLocalStorage', getLocalStorage('key1'));
+// console.log('getLocalStorage', getLocalStorage('key1', 'uid_123456'));
+
+// removeLocalStorage('key1');
+// console.log('getLocalStorage', getLocalStorage('key1', 'uid_123456'));
+
+// removeLocalStorage('key1', 'uid_123456');
+// console.log('getLocalStorage', getLocalStorage('key1', 'uid_123456'));
+
+// clearLocalStorage() // 删除 setLocalStorage 存储的所有值，一个不留
+// console.log('getLocalStorage', getLocalStorage('key1'));
+
+// setSessionStorage('key1', {a: 1, b: {c: 3}});
+// console.log('getSessionStorage', getSessionStorage('key1'));
+
+// removeSessionStorage('key1');
+// console.log('getLocalStorage', getSessionStorage('key1'));
+
+// setSessionStorage('key1', {a: 1, b: {c: 3}}, 'uid_123456');
+
+// console.log('getSessionStorage', getSessionStorage('key1'));
+// console.log('getSessionStorage', getSessionStorage('key1', 'uid_123456'));
+
+// removeSessionStorage('key1');
+// console.log('getSessionStorage', getSessionStorage('key1', 'uid_123456'));
+
+// removeSessionStorage('key1', 'uid_123456');
+// console.log('getSessionStorage', getSessionStorage('key1', 'uid_123456'));
+
+// clearSessionStorage()
+// console.log('getSessionStorage', getSessionStorage('key1', 'uid_123456'));
+
+setCookie('key2', {a: 1, b:{c:3, f: false}}, 3);
+console.log('getCookie', getCookie('key2'));
+
+removeCookie('key2')
+console.log('getCookie', getCookie('key2'));

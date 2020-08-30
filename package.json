@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "any-utils": "^1.9.2",
+    "easy-storage-browser": "^1.0.4",
     "promise-loadimg": "^1.0.6"
   }
 }
