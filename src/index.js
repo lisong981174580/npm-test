@@ -182,3 +182,11 @@ console.log('isEqual', isEqual({ a: 1}, {a: 1, b: {a: 1}}));
 
 console.log('unique', unique([1, 2, 3, 3, 3, 3]));
 console.log('flat', flat([1, 2, 3, [1, 2, [1, 2]]]));
+
+import loadimg from 'promise-loadimg';
+
+loadimg('https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg').then(img => {
+  console.log(img) // <img src="https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg">
+}).catch(error => {
+  // 图片加载失败
+})
