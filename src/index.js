@@ -212,9 +212,9 @@ import {
 // removeLocalStorage('key1');
 // console.log('getLocalStorage', getLocalStorage('key1'));
 
-// setLocalStorage('key1', {a: 1, b: {c: 3}}, 'uid_123456');
-// console.log('getLocalStorage', getLocalStorage('key1'));
-// console.log('getLocalStorage', getLocalStorage('key1', 'uid_123456'));
+setLocalStorage('key1', {a: 1, b: {c: 3}}, 'uid_123456');
+console.log('getLocalStorage', getLocalStorage('key1'));
+console.log('getLocalStorage', getLocalStorage('key1', 'uid_123456'));
 
 // removeLocalStorage('key1');
 // console.log('getLocalStorage', getLocalStorage('key1', 'uid_123456'));
@@ -231,10 +231,10 @@ import {
 // removeSessionStorage('key1');
 // console.log('getLocalStorage', getSessionStorage('key1'));
 
-// setSessionStorage('key1', {a: 1, b: {c: 3}}, 'uid_123456');
+setSessionStorage('key1', {a: 1, b: {c: 3}}, 'uid_123456');
 
-// console.log('getSessionStorage', getSessionStorage('key1'));
-// console.log('getSessionStorage', getSessionStorage('key1', 'uid_123456'));
+console.log('getSessionStorage', getSessionStorage('key1'));
+console.log('getSessionStorage', getSessionStorage('key1', 'uid_123456'));
 
 // removeSessionStorage('key1');
 // console.log('getSessionStorage', getSessionStorage('key1', 'uid_123456'));
@@ -250,3 +250,35 @@ console.log('getCookie', getCookie('key2'));
 
 removeCookie('key2')
 console.log('getCookie', getCookie('key2'));
+
+import { ajax, promiseAjax, jsonp } from 'browser-request-utils';
+
+// ajax({
+//   method: 'get',
+//   url: '/mock/test.json',
+//   success: (res) => {
+//     console.log('ajax', res);
+//   },
+// })
+
+// promiseAjax({
+//   method: 'get',
+//   url: '/mock/test.json',
+// }).then(res => {
+//   console.log('promiseAjax', res);
+// }).catch(error => {
+//   console.error(error);
+// }).then(() => {
+//   console.log('测试 promise');
+// })
+
+jsonp({
+  url: '/mock/jsonp.js?',
+  charset: 'UTF-8',
+  onsuccess: (res) => {
+    console.log(res);
+  },
+  onerror: () => {
+    // 出错了
+  }
+})

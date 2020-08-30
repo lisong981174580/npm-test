@@ -28,9 +28,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "any-utils": "^1.9.3",
-    "browser-request-utils": "^1.0.6",
-    "easy-storage-browser": "^1.0.5",
+    "any-utils": "^1.9.2",
+    "browser-request-utils": "^1.0.4",
+    "easy-storage-browser": "^1.0.4",
     "promise-loadimg": "^1.0.6"
   }
 }
